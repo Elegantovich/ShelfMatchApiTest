@@ -4,6 +4,9 @@ import os
 import time
 
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -12,9 +15,9 @@ logging.basicConfig(
     filename='main.log',
     filemode='w'
 )
-
-login, password = 'test.task.account', 'Z0w7S1qAdjzDZ5'
-cred = {'account': {'login': login, 'password': password}}
+LOGIN = os.getenv('LOGIN', default='test.task.account')
+PASSWORD = os.getenv('PASSWORD', default='Z0w7S1qAdjzDZ5')
+cred = {'account': {'login': LOGIN, 'password': PASSWORD}}
 url_auth = 'https://oauth.shelfmatch.com/token/'
 headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 recognize_list = []
@@ -28,11 +31,13 @@ step_time = 10
 """
 Recieve images for recognize. gif images are not supported!
 """
+
+
 def get_files(path):
     for root, dirs, files in os.walk(path):
         for i in files:
             if '.gif' in i or '.png' in i or '.jpg' in i:
-                image = f'{root}\{i}'
+                image = f'{root}\\{i}'
                 with open(image, 'rb') as image_file:
                     image64 = str(base64.b64encode(image_file.read()))[2:-1]
                 recognize_list.append(image64)
