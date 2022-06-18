@@ -29,14 +29,6 @@ python -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
-Make migrations:
-```
-python manage.py makemigrations
-```
-Run migrations:
-```
-python manage.py migrate 
-```
 Run the script
 ```
 python test.py
