@@ -23,6 +23,11 @@ Activate a virtual environment:
 ```
 source venv/Scripts/activate
 ```
+Создайте файл `.env` командой и добавьте в него переменные окружения 
+для работы со скриптом(тестовые учетные данные из ТЗ уже вбиты по дефолту):
+```
+touch .env
+```
 Install dependencies from file requirements.txt:
 ```
 python -m pip install --upgrade pip
