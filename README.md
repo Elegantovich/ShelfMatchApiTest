@@ -1,5 +1,6 @@
 # ShelfMatchApiTest
 
+![Status](https://github.com/elegantovich/ShelfMatchApiTest/actions/workflows/main.yml/badge.svg)
 ## Description
 Скрипт для распознавания товаров с полок магазинов, работающий по API.
 
