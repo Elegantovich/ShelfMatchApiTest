@@ -23,8 +23,7 @@ Activate a virtual environment:
 ```
 source venv/Scripts/activate
 ```
-Создайте файл `.env` командой и добавьте в него переменные окружения 
-для работы со скриптом(тестовые учетные данные из ТЗ уже вбиты по дефолту):
+Create a file use the `.env` command and add environment variables to it to work with the script (test credentials from the TOR have already been entered by default):
 ```
 touch .env
 ```
