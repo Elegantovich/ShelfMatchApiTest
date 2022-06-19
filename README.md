@@ -38,3 +38,4 @@ Run the script
 ```
 python test.py
 ```
+The folder with the files should be in the same directory as the file test.py
